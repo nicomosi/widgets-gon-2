@@ -1,0 +1,425 @@
+
+/*
+ * inicializo los elementos
+ * ocultos
+ * seteo el tiempo de la animacion
+ */
+
+
+.animation-element.slide-right.in-view,
+.animation-element.slide-left.in-view,
+.animation-element.slide-top.in-view,
+.animation-element.slide-bottom.in-view,
+.animation-element.fadeIn.in-view,
+.animation-element.grayscale.in-view {
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(0%);
+}
+
+/*
+ * MEDIAS
+ *
+ *************************************************/
+
+.wc-ae {
+	-moz-transition: all 300ms linear;
+	-webkit-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+body.toTop #widget-whatsapp {
+	bottom: 205px;
+}
+
+
+#widget-whatsapp {
+	bottom: 105px;
+	color: rgba(255,255,255,1);
+	height: 70px;
+	overflow: hidden;
+	position: fixed;
+	right: 17px;
+	text-transform: uppercase !important;
+	z-index: 999;
+}
+#widget-whatsapp:hover,
+#widget-whatsapp.active {
+	height: 80px;
+	bottom: 95px;
+}
+
+#widget-whatsapp #widget-triangle-bubble {
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #00a500;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #00a500;
+	height: 0;
+	left: 25px;
+	position: relative;
+	width: 0;
+	display: none;
+}
+
+
+#widget-whatsapp #widget-dialog-bubble {
+	-webkit-border-radius: 20px;
+	background-color: #00a500;
+	border-radius: 20px;
+	height: 70px;
+	padding: 10px 10px;
+	width: 70px;
+}
+#widget-whatsapp:hover #widget-dialog-bubble,
+#widget-whatsapp.active #widget-dialog-bubble {
+	height: 80px;
+	width: 290px;
+}
+
+
+#widget-whatsapp #widget-dialog-bubble #widget-button {
+	/* display: inline-block; */
+	float: left;
+	font-size: 10px;
+	line-height: 1.1em;
+	padding: 0px;
+	text-align: center;
+	width: 70px;
+	width: 50px;
+}
+/* #widget-whatsapp:hover #widget-dialog-bubble #widget-button */
+#widget-whatsapp.active #widget-dialog-bubble #widget-button {
+	width: 55px;
+}
+
+#widget-whatsapp #widget-dialog-bubble #widget-button #widget-icon {
+	max-width: 100%;
+}
+
+#widget-whatsapp #widget-dialog-bubble #widget-button p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#widget-whatsapp #widget-dialog-bubble #widget-description {
+	/* display: none; */
+	font-size: 11px;
+	font-size: 13px;
+	line-height: 1.1em;
+	padding-left: 10px;
+	position: relative;
+	width: 0px;
+	overflow: hidden;
+	float: right;
+	text-align: center;
+	margin: 5px 0;
+}
+#widget-whatsapp #widget-dialog-bubble #widget-description p {
+	margin-bottom: 8px;
+}
+
+#widget-whatsapp:hover #widget-dialog-bubble #widget-description,
+#widget-whatsapp.active #widget-dialog-bubble #widget-description {
+	/* display: inline-block; */
+	width: 205px;
+}
+
+#widget-whatsapp #widget-dialog-bubble #widget-description #widget-separator {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	border-left: 0px solid rgba(255,255,255,1);
+}
+
+
+/* #widget-whatsapp:hover #widget-dialog-bubble #widget-description #widget-separator */
+#widget-whatsapp.active #widget-dialog-bubble #widget-description #widget-separator {
+	border-left: 1px solid rgba(255,255,255,1);
+}
+
+
+#widget-whatsapp.active #widget-dialog-bubble .widget-number,
+#widget-whatsapp #widget-dialog-bubble .widget-display-phone {
+	-webkit-border-radius: 20px;
+	background: transparent;
+	border-radius: 20px;
+	border: 1px solid rgba(255,255,255,1);
+	color: rgba(255,255,255,1);
+	display: block;
+	font-size: 16px;
+	font-weight: 900;
+	height: 27px;
+	overflow: hidden;
+	padding-bottom: 6px;
+	padding-top: 6px;
+	text-transform: uppercase !important;
+	width: 100%;
+}
+
+#widget-whatsapp.display-phone #widget-dialog-bubble #widget-description .widget-display-phone {
+	display: none;
+}
+#widget-whatsapp.display-phone #widget-dialog-bubble .widget-number {
+	display: block;
+}
+
+#widget-whatsapp.active #widget-dialog-bubble .widget-number,
+#widget-whatsapp #widget-dialog-bubble .widget-display-phone:hover {
+	color: #00a500;
+	background-color: rgba(255,255,255,1);
+}
+
+#widget-whatsapp #widget-dialog-bubble #widget-button .widget-number,
+#widget-whatsapp #widget-dialog-bubble #widget-description .widget-number {
+	display: none;
+}
+
+#widget-whatsapp.display-phone #widget-dialog-bubble #widget-description .widget-number {
+	display: block;
+}
+/*
+
+#widget-whatsapp.active #widget-dialog-bubble #widget-description .widget-number {
+	display: none;
+}
+#widget-whatsapp.active #widget-dialog-bubble #widget-description .widget-display-phone {
+	display: none;
+}
+*/
+
+#widget-whatsapp #widget-dialog-bubble #widget-button p,
+#widget-whatsapp #widget-dialog-bubble #widget-button .widget-display-phone {
+	display: none;
+}
+
+/*
+ * media
+ * xs
+ */
+@media (max-width:767px) {
+	#widget-whatsapp {
+		height: 60px;
+		bottom: 90px;
+	}
+	#widget-whatsapp:hover,
+	#widget-whatsapp.active {
+		/**
+		 * animacion
+		 *
+		 * /
+		height: 75px;
+		bottom: 80px;
+		/**/
+
+		height: 60px;
+		bottom: 90px;
+	}
+
+	body.toTop #widget-whatsapp:hover,
+	body.toTop #widget-whatsapp.active,
+	body.toTop #widget-whatsapp {
+		bottom: 165px;
+	}
+
+	#widget-whatsapp #widget-triangle-bubble {
+		left: 18px;
+	}
+
+
+	#widget-whatsapp #widget-dialog-bubble {
+		height: 60px;
+		width: 60px;
+		padding: 10px;
+	}
+
+	#widget-whatsapp:hover #widget-dialog-bubble,
+	#widget-whatsapp.active #widget-dialog-bubble {
+		/**
+		 * animacion
+		 *
+		 * /
+		height: 75px;
+		/**/
+		height: 60px;
+
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-button {
+		width: 40px;
+	}
+	#widget-whatsapp.active #widget-dialog-bubble #widget-button {
+		/**
+		 * animacion
+		 *
+		 * /
+		width: 55px;
+		*/
+		width: 40px;
+
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-description {
+		font-size: 11px;
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-description .widget-number {
+		/**
+		 * animacion
+		 *
+		 * /
+		display: none;
+		*/
+		display: block;
+	}
+
+	#widget-whatsapp.active #widget-dialog-bubble #widget-description .widget-number {
+		/**
+		 * animacion
+		 *
+		 * /
+		display: none;
+		*/
+		display: block;
+	}
+
+	#widget-whatsapp.active #widget-dialog-bubble #widget-description .widget-display-phone {
+		/**
+		 * animacion
+		 *
+		 * /
+		display: none;
+		*/
+
+		display: block;
+	}
+
+	#widget-whatsapp.active #widget-dialog-bubble #widget-description .widget-number {
+		/**
+		 * animacion
+		 *
+		 * /
+		color: rgba(255,255,255,1) !important;
+		display: inline;
+		*/
+		display: none;
+	}
+
+
+	#widget-whatsapp:hover #widget-dialog-bubble,
+	#widget-whatsapp.active #widget-dialog-bubble {
+		/**
+		 * animacion
+		 *
+		 * /
+		width: 99px;ç
+		*/
+		width: 60px;
+	}
+
+	#widget-whatsapp:hover #widget-dialog-bubble #widget-description,
+	#widget-whatsapp.active #widget-dialog-bubble #widget-description {
+		display: none;
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-button .widget-display-phone {
+		/**
+		 * animacion
+		 *
+		 * /
+		display: inline-block;
+		padding: 6px 8px;
+		font-weight: 900;
+		font-size: 14px;
+		margin-top: 10px;
+		*/
+		display: none;
+
+	}
+
+	#widget-whatsapp:hover #widget-dialog-bubble,
+	#widget-whatsapp.active #widget-dialog-bubble {
+		/**
+		 * animacion
+		 *
+		 * /
+		width: 75px;
+		*/
+		width: 60px;
+
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-button .widget-display-phone:hover {
+		color: rgba(255,255,255,1) !important;
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-button #widget-icon {
+		opacity: 1;
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-button {
+		position: relative;
+	}
+
+	#widget-whatsapp:hover #widget-dialog-bubble #widget-button #widget-icon,
+	#widget-whatsapp.active #widget-dialog-bubble #widget-button #widget-icon {
+		/**
+		 * animacion
+		 *
+		 * /
+		opacity: 0;
+		*/
+	opacity: 1;
+	}
+
+	#widget-whatsapp #widget-dialog-bubble #widget-button p {
+		position: absolute;
+		display: block;
+		left: 0;
+		right: 0;
+		color: rgba(255,255,255,1);
+		font-size: 10px;
+		opacity: 0;
+		line-height: 1.4em;
+		display: none;
+	}
+	#widget-whatsapp:hover #widget-dialog-bubble #widget-button p,
+	#widget-whatsapp.active #widget-dialog-bubble #widget-button p {
+		opacity: 1;
+	}
+
+}
+
+/*
+ * media
+ * sm
+ */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/*
+ * media
+ * md
+ */
+@media (min-width: 992px) and (max-width: 1024px) {
+}
+
+/*
+ * media
+ * lg
+ */
+@media (min-width: 1025px) and (max-width: 1199px) {
+}
+
+/*
+ * media
+ * xl
+ */
+@media (min-width: 1200px) {
+}
